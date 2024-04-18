@@ -7,6 +7,7 @@ import {
 } from "@remix-run/react";
 
 import "./tailwind.css"
+import Nav from "./components/ui/nav";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -17,7 +18,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-background text-foreground min-h-screen flex flex-col items-center animate-in">
+        <Nav />
         {children}
         <ScrollRestoration />
         <Scripts />
